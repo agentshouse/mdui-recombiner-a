@@ -12,7 +12,8 @@
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "prepare": "node scripts/prepare-release.mjs",
     "release:check": "node scripts/check-release.mjs",
-    "licenses:check": "node scripts/generate-notices.mjs --check"
+    "licenses:check": "node scripts/generate-notices.mjs --check",
+    "publish": "node publish.mjs"
   },
   "license": "Apache-2.0",
   "devDependencies": {

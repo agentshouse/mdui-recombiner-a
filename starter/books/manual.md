@@ -17,4 +17,3 @@ toc_json: '{"title":"TeachBooks Manual","html_url":"https://teachbooks.io/manual
 ---
 
 Catalogue adapted from the pinned donor. Full attribution and licence are displayed in the App and included in its release.
-
