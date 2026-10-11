@@ -20,7 +20,7 @@ export const catalogQuery = {
 };
 export async function connect(): Promise<Runtime> {
   const bridge = connectHouseBridge();
-  bridge.setTab({ title: "Teachbook recombiner" });
+  bridge.setTab({ title: "Book Recombiner" });
   return bridge.runtime;
 }
 /** Writes use an exact null draft precondition and exact opened document bases. Save means queued. */

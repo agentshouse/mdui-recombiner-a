@@ -85,7 +85,7 @@ test("catalogue waits for first sync, recovers binding errors, and blocks lost r
   assert.equal(writable(), true);
   emit("service-mode", "write-halted");
   assert.equal(writable(), true);
-  const sample = JSON.parse(fs.readFileSync("samples/manual.catalog.json", "utf8"))[0];
+  const sample = JSON.parse(fs.readFileSync("tests/support/samples/manual.catalog.json", "utf8"))[0];
   assert.equal(await addBook(sample), true);
   assert.equal(writes, 1);
   assert.equal(saves, 1);

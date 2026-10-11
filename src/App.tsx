@@ -317,7 +317,7 @@ ${toc}\n
   });
   const mailto = createMemo(
     () =>
-      `mailto:?subject=Add external teachbook chapters&body=${encodeURIComponent(text())}`,
+      `mailto:?subject=Add external book chapters&body=${encodeURIComponent(text())}`,
   );
 
   async function copyText() {
@@ -495,7 +495,7 @@ const App: Component = () => {
   return (
     <div class="w-full px-4">
       <div>
-        <h1 class="py-4 text-3xl">Teachbook recombiner</h1>
+        <h1 class="py-4 text-3xl">Book Recombiner</h1>
         <p>
           Select chapters from the available teach books to incorporate into
           your own teach book. Click <MdiPlusBoxOutline class="inline" /> to see

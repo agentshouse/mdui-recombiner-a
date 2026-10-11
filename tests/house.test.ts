@@ -22,7 +22,7 @@ import {
   validateBook,
 } from "../src/model.ts";
 const sample = JSON.parse(
-  fs.readFileSync("samples/manual.catalog.json", "utf8"),
+  fs.readFileSync("tests/support/samples/manual.catalog.json", "utf8"),
 )[0];
 const fields = bookFields(validateBook(sample, "manual"));
 const doc: Document = {

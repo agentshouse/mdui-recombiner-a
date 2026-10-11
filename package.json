@@ -1,5 +1,5 @@
 {
-  "name": "house-teachbook-recombiner",
+  "name": "house-book-recombiner",
   "version": "0.1.0",
   "description": "",
   "type": "module",
@@ -13,6 +13,8 @@
     "prepare": "node scripts/prepare-release.mjs",
     "release:check": "node scripts/check-release.mjs",
     "licenses:check": "node scripts/generate-notices.mjs --check",
+    "starter:check": "node scripts/check-starter.mjs",
+    "verify": "npm run typecheck && npm run lint && npm test && npm run starter:check && npm run build && npm run release:check && npm run licenses:check",
     "publish": "node publish.mjs"
   },
   "license": "Apache-2.0",

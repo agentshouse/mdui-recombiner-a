@@ -131,8 +131,9 @@ const result = {
   browserAcceptance:
     "Not claimed; hosted check remains blocked by dev site password.",
 };
+fs.mkdirSync(path.join(root, ".build"), { recursive: true });
 fs.writeFileSync(
-  path.join(root, "reports/release-check.json"),
+  path.join(root, ".build/release-check.json"),
   `${JSON.stringify(result, null, 2)}\n`,
 );
 console.log(result);
