@@ -1,0 +1,24 @@
+recombiner_book:
+  type: object
+  properties:
+    id: { type: string, pattern: '^[a-zA-Z0-9_-]+$' }
+    title: { type: string }
+    html_url: { type: string, format: uri }
+    code_url: { type: string, format: uri }
+    release: { type: string }
+    toc_path: { type: string }
+    logo: { type: string }
+    author: { type: string }
+    toc_json: { type: string }
+    deleteable: { type: boolean }
+    license: { type: string }
+    license_url: { type: string, format: uri }
+    source_url: { type: string, format: uri }
+    source_revision: { type: string }
+  required: [id, title, html_url, code_url, release, toc_path, logo, author, toc_json, deleteable, license, license_url, source_url, source_revision]
+recombiner_selection:
+  type: object
+  properties:
+    book: { type: string, reference: recombiner_book }
+    chapter_key: { type: string, pattern: '^\d+(?:\.\d+)*$' }
+  required: [book, chapter_key]

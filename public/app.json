@@ -1,0 +1,4 @@
+{
+  "entry": "index.html",
+  "room_slots": [{ "name": "catalogue", "access": "write", "types": ["recombiner_book", "recombiner_selection"] }]
+}

@@ -1,0 +1,6 @@
+results:
+  - path: /rooms/recombiner-port/settings/schema.yaml
+    revision: fr_5q2.1.6
+  - path: /rooms/recombiner-port/books/manual.md
+    revision: fr_5q1.1.6
+

@@ -1,0 +1,4 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm error code EOVERRIDE
+npm error Override for babel-preset-solid@^1.9.5 conflicts with direct dependency
+npm error A complete log of this run can be found in: /workspace/scratch/364b78933bbf/house-home/.npm/_logs/2026-10-11T12_00_33_486Z-debug-0.log

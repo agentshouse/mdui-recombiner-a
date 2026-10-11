@@ -1,0 +1,7 @@
+.python-version
+__pycache__/
+.mypy_cache
+venv
+.venv
+node_modules
+dist

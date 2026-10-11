@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "files": 12,
+  "bytes": 515791,
+  "mebibytes": 0.492,
+  "limits": "20 MiB / 2000 files",
+  "localAssetsOnly": true,
+  "sourceAndReleaseSchemasIdentical": true,
+  "browserAcceptance": "Not claimed; hosted check remains blocked by dev site password."
+}
