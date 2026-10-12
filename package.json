@@ -14,15 +14,16 @@
     "release:check": "node scripts/check-release.mjs",
     "licenses:check": "node scripts/generate-notices.mjs --check",
     "starter:check": "node scripts/check-starter.mjs",
-    "verify": "npm run typecheck && npm run lint && npm test && npm run starter:check && npm run build && npm run release:check && npm run licenses:check",
-    "publish": "node publish.mjs"
+    "verify": "npm run test:publisher && npm run typecheck && npm run lint && npm test && npm run starter:check && npm run build && npm run release:check && npm run licenses:check",
+    "publish": "node publish.mjs",
+    "test:publisher": "node --test scripts/publish-regression.mjs"
   },
   "license": "Apache-2.0",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/node": "22.14.1",
     "autoprefixer": "10.4.21",
-    "babel-preset-solid": "^1.9.5",
+    "babel-preset-solid": "1.9.5",
     "postcss": "8.5.3",
     "tailwindcss": "3.4.17",
     "tailwindcss-animate": "1.0.7",
