@@ -33,7 +33,7 @@
     "vite-tsconfig-paths": "5.1.4"
   },
   "dependencies": {
-    "@agentshouse/app-bridge": "0.1.0-ce524f6608238",
+    "@agentshouse/app-bridge": "0.1.0-ca4ec913df08d",
     "@kobalte/core": "0.13.9",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",

@@ -1,4 +1,4 @@
-import { connectHouseBridge } from "@agentshouse/app-bridge";
+import { houseBridge } from "@agentshouse/app-bridge";
 import {
   type Book,
   type Document,
@@ -8,7 +8,7 @@ import {
   selectionPath,
   validateBook,
 } from "./model.ts";
-export type Runtime = Awaited<ReturnType<typeof connectHouseBridge>["runtime"]>;
+export type Runtime = Awaited<ReturnType<typeof houseBridge>["runtime"]>;
 export type Room = Awaited<ReturnType<Runtime["rooms"]>>[number];
 export type Draft = Awaited<ReturnType<Runtime["roomDraft"]["read"]>>;
 type Parts = Parameters<Runtime["roomDraft"]["write"]>[3];
@@ -19,7 +19,7 @@ export const catalogQuery = {
   orderBy: [{ by: "path" as const, direction: "asc" as const }],
 };
 export async function connect(): Promise<Runtime> {
-  const bridge = connectHouseBridge();
+  const bridge = houseBridge();
   bridge.setTab({ title: "Book Recombiner" });
   return bridge.runtime;
 }
