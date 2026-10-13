@@ -1,3 +1,4 @@
+import { checkCurrentStarter } from './check-current-starter.mjs';
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -17,12 +18,12 @@ function walk(directory) {
 walk('starter')
 assert(Object.keys(documents).length > 0)
 assert.equal(validate({ 'settings/schema.yaml': schema, ...documents }, { binaryTargets: [] }, model.model).verdict, 'accept')
-const originals = new Map(JSON.parse(fs.readFileSync('tests/support/samples/seed-room-changes.json', 'utf8')).changes.map(row => [row.path.replace(/^\/rooms\/[^/]+\//, ''), row.content]))
+checkCurrentStarter(documents);
 for (const [file, content] of Object.entries(documents)) {
-  assert.equal(content, originals.get(file), 'Starter must preserve original licensed example paths and bytes.')
   const result = parse(content, file); assert(result.ok)
-  assert.equal(result.document.type, 'recombiner_book')
-  assert.equal(result.document.fields.license, 'CC-BY-4.0')
+  assert(['recombiner_book', 'recombiner_selection'].includes(result.document.type))
+  if (result.document.type === 'recombiner_book') assert.equal(result.document.fields.license, 'CC-BY-4.0')
+  else assert(documents[path.posix.normalize(path.posix.join(path.posix.dirname(file), result.document.fields.book))], 'Missing selected book')
 }
 assert.equal(fs.readFileSync('public/samples/manual.catalog.json', 'utf8'), fs.readFileSync('tests/support/samples/manual.catalog.json', 'utf8'), 'Runtime catalogue fixture must remain unchanged.')
-console.log(`PASS: ${Object.keys(documents).length} complete original licensed catalogue document.`)
+console.log(`PASS: ${Object.keys(documents).length} current Starter documents and unchanged licensed catalogue.`)

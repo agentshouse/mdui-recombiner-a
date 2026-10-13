@@ -142,7 +142,7 @@ export async function initializeStore(
     await watch(client.observe("connection-refusal"), (value) => {
       if (value)
         setWarning(
-          `House connection refused: ${value.reason}. Reopen the App after resolving access.`,
+          `House connection refused: ${value.code}. Reopen the App after resolving access.`,
         );
     });
     if (!(await client.persistence()))

@@ -71,7 +71,7 @@ function fake(
     save: async (...args: unknown[]) => {
       saves.push(args);
       return options.refused
-        ? { outcome: "refused", rule: options.refused }
+        ? { outcome: "refused", code: options.refused, retryable: false }
         : { outcome: "saved", identifier: "queued-id" };
     },
     query: async () => ({ documents: options.documents ?? [doc] }),

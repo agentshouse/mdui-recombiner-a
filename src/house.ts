@@ -57,7 +57,7 @@ export async function queueChanges(
   const result = await md.save(room, drafts);
   if (result.outcome !== "saved")
     throw new Error(
-      `House refused this save: ${result.rule}. Your drafts have been kept. ${JSON.stringify(result)}`,
+      `House refused this save: ${result.code}. Your drafts have been kept. ${JSON.stringify(result)}`,
     );
   return result.identifier;
 }
