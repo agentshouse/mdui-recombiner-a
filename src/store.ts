@@ -109,6 +109,7 @@ export async function initializeStore(
       if (!queryStarted) {
         queryStarted = true;
         pendingQuery = watch(client.observe("query", catalogQuery), (value) => {
+          if ("pending" in value) return;
           latestQuery = value.documents;
           redraw();
         }).catch((caught) => {
