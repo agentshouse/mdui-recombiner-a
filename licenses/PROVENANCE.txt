@@ -1,0 +1,18 @@
+TeachBooks Recombiner software
+Authors: Stefan Verhoeven and Bart Schilperoort, Netherlands eScience Center
+Repository: https://github.com/TeachBooks/recombiner
+Commit: fe5b037e96a9c8c4a66a92693141a9192e359269
+Software license: Apache-2.0 (LICENSE.txt).
+
+TeachBooks Manual catalogue and logo
+Authors: TeachBooks Development Team and TeachBooks users
+Original catalogue: https://github.com/TeachBooks/recombiner/blob/fe5b037e96a9c8c4a66a92693141a9192e359269/chapters.json
+Manual: https://github.com/TeachBooks/manual/tree/8ea59e8f721c77848de71a7cc7de722d3bd1ad8e
+License evidence: https://github.com/TeachBooks/manual/blob/8ea59e8f721c77848de71a7cc7de722d3bd1ad8e/LICENSE
+License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Full original license, including listed external-material notices, is retained as Manual-CC-BY-4.0.txt.
+Changes: filtered catalogue to the Manual only; author HTML normalized to plain text; logo vendored locally; attribution fields added; book deletion disabled for the demo. Chapter titles, hierarchy and URLs are unchanged from donor. 109 TOC nodes (102 nodes have external-source links). Root remains unselectable as in donor. No chapter full text is republished. No HOS workbook is included.
+Original logo URL: https://raw.githubusercontent.com/TeachBooks/manual/8ea59e8f721c77848de71a7cc7de722d3bd1ad8e/book/images/TeachBooks_logo.svg
+Local logo SHA-256: 1a83c8d5a1a9ba66fec4cf57ebc8ccd8675ee2b8de1627d9d7f4c5d6b99a202a
+
+House modifications (2026-10-11): runtime persistence, local catalogue imports, explicit Room state and sync/refusal UI, responsive width fixes, local assets and retained attributions.
